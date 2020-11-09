@@ -1,0 +1,247 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {# {{ parent() }} #}
+    Qui sommes-nous
+{% endblock %}
+
+{#{% block body %}#}
+{#    {{ parent() }}#}
+{#{% endblock %}#}
+
+{% block content %}
+    <div class="page-content">
+        <!-- inner page banner -->
+        <div class="dez-bnr-inr overlay-black-middle" style="background-image:url(images/background/bg4.jpg);">
+            <div class="container">
+                <div class="dez-bnr-inr-entry">
+{#                    <h1 class="text-white">Qui sommes-nous</h1>#}
+                </div>
+            </div>
+        </div>
+        <!-- inner page banner END -->
+        <!-- Breadcrumb row -->
+        <div class="breadcrumb-row">
+            <div class="container">
+                <ul class="list-inline">
+                    <li><a href="{{ path('home') }}">Accueil</a></li>
+                    <li>Qui sommes-nous</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb row END -->
+        <!-- contact area -->
+        <div class="clearfix">
+            <!-- About Company -->
+            <div class="section-full bg-gray content-inner"
+                 style="background-image: url(images/bg-img.png); background-repeat: repeat-x; background-position: left bottom -37px;">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-12">
+                                <h1 class="m-b20"> BOA Construction</h1>
+                                <div class="dez-separator bg-primary"></div>
+                                <div class="clear"></div>
+                                <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen book.</strong></p>
+                                <p class="m-b50">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in the
+                                    with the release of Letraset sheets containing Lorem Ipsum [...]</p>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 col-sm-6">
+                                        <div class="icon-bx-wraper left m-b30">
+                                            <div class="icon-bx-sm bg-secondry "><span class="icon-cell"><i
+                                                            class="fa fa-building-o text-primary"></i></span></div>
+                                            <div class="icon-content">
+                                                <h3 class="dez-tilte text-uppercase">Construction</h3>
+                                                <p>Lorem ipsum dolor sit adipiscing sed diam nonummy end [...]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-sm-6">
+                                        <div class="icon-bx-wraper left m-b30">
+                                            <div class="icon-bx-sm bg-secondry "><span class="icon-cell"><i
+                                                            class="fa fa-building-o text-primary"></i></span></div>
+                                            <div class="icon-content">
+                                                <h3 class="dez-tilte text-uppercase">Architecture</h3>
+                                                <p>Lorem ipsum dolor sit adipiscing sed diam nonummy end [...]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-sm-6">
+                                        <div class="icon-bx-wraper left m-b30">
+                                            <div class="icon-bx-sm bg-secondry "><span class="icon-cell"><i
+                                                            class="fa fa-building-o text-primary"></i></span></div>
+                                            <div class="icon-content">
+                                                <h3 class="dez-tilte text-uppercase">Consulting</h3>
+                                                <p>Lorem ipsum dolor sit adipiscing sed diam nonummy end [...]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-sm-6">
+                                        <div class="icon-bx-wraper left m-b30">
+                                            <div class="icon-bx-sm bg-secondry "><span class="icon-cell"><i
+                                                            class="fa fa-building-o text-primary"></i></span></div>
+                                            <div class="icon-content">
+                                                <h3 class="dez-tilte text-uppercase">Mechanical</h3>
+                                                <p>Lorem ipsum dolor sit adipiscing sed diam nonummy end [...]</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-12">
+                                <div class="dez-thu m-b30"><img src="images/worker.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Company END -->
+            <!-- Counter -->
+            <div class="section-full bg-gray bg-img-fix content-inner overlay-black-middle"
+                 style="background-image:url(images/background/bg12.jpg);">
+                <div class="container">
+                    {#<div class="row">
+                        <div class="col-md-6 col-lg-3 col-sm-6 col-6">
+                            <div class="m-b30 text-white text-center">
+                                <div class="icon-bx-lg radius  border-2 m-b20">
+                                    <div class="icon-cell text-white"><i class="fa fa-building-o"></i></div>
+                                </div>
+                                <div class="counter font-26 font-weight-800 text-primary m-b5">1035</div>
+                                <div class="aon-separator bg-primary"></div>
+                                <p>Completed Project</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-sm-6 col-6">
+                            <div class="m-b30 text-white text-center">
+                                <div class="icon-bx-lg radius  border-2 m-b20">
+                                    <div class="icon-cell text-white"><i class="fa fa-male"></i></div>
+                                </div>
+                                <div class="counter font-26 font-weight-800 text-primary m-b5">1124</div>
+                                <div class="aon-separator bg-primary"></div>
+                                <p>Active Experts</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-sm-6 col-6">
+                            <div class=" m-b30 text-white text-center">
+                                <div class="icon-bx-lg radius  border-2 m-b20">
+                                    <div class="icon-cell text-white"><i class="fa fa-male"></i></div>
+                                </div>
+                                <div class="counter font-26 font-weight-800 text-primary m-b5">834</div>
+                                <div class="aon-separator bg-primary"></div>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 col-sm-6 col-6">
+                            <div class="m-b10 text-white text-center">
+                                <div class="icon-bx-lg radius  border-2 m-b20">
+                                    <div class="icon-cell text-white"><i class="fa fa-area-chart"></i></div>
+                                </div>
+                                <div class="counter font-26 font-weight-800 text-primary m-b5">538</div>
+                                <div class="aon-separator bg-primary"></div>
+                                <p>Developer Hand</p>
+                            </div>
+                        </div>
+                    </div>#}
+                </div>
+            </div>
+            <!-- Counter End -->
+            <!-- Architecture -->
+            {#<div class="section-full text-center aon-our-team bg-white content-inner">
+                <div class="container">
+                    <div class="section-head">
+                        <h2 class="text-uppercase"> Architecture</h2>
+                        <span class="title-small">Best Cleaning Deals</span>
+                        <div class="after-titile-line"></div>
+                    </div>
+                    <div class="section-content">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-cogs"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Safety</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-recycle"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Community</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-graduation-cap"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Sustainability</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-trophy"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Best Quality</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-pencil"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Integrity</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4 col-sm-6 m-b30">
+                                <div class="icon-bx-wraper center p-lr15">
+                                    <div class="icon-bx-sm radius bg-primary m-b20"><a href="#" class="icon-cell"><i
+                                                    class="fa fa-flag-checkered"></i></a></div>
+                                    <div class="icon-content">
+                                        <h5 class="aon-tilte text-uppercase">Strategy</h5>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>#}
+            <!-- Architecture End -->
+            <!-- What peolpe are saying -->
+
+            <!-- What peolpe are saying END -->
+        </div>
+        <!-- contact area END -->
+    </div>
+
+    {% include '_includes/_founders.html.twig' %}
+
+    {% include '_includes/_testimonials.html.twig' %}
+
+{% endblock %}
