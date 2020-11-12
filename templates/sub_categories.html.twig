@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ categories[4].name }}
+{% endblock %}
+
+{% block content %}
+    <div class="section-full bg-white content-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="widget_services style-2 m-b40">
+                        <ul>
+                            <li><a href="{{ path('nos_services') }}">ALL SERVICES</a> </li>
+                            <li class="active"><a href="construction.html">CONSTRUCTION</a>  </li>
+                            <li><a href="renovations.html">RENOVATIONS</a>  </li>
+                            <li><a href="big-projects.html">BIG PROJECTS</a>  </li>
+                            <li><a href="consulting.html">CONSULTING</a> </li>
+                            <li><a href="architecture.html">ARCHITECTURE</a> </li>
+                            <li><a href="concrete-transport.html">CONCRETE TRANSPORT</a> </li>
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Get your brochures</h4>
+                        <div class="download-file">
+                            <ul>
+                                <li>
+                                    <a href="files/pdf-sample.pdf" target="_blank">
+                                        <span class="pull-left"><i class="fa fa-file-pdf-o"></i></span>
+                                        <span class="file-name">Company Brochures</span>
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="files/pdf-sample.pdf" target="_blank">
+                                        <span class="pull-left"><i class="fa fa-file-pdf-o"></i></span>
+                                        <span class="file-name">Company Info</span>
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="widget  widget_getintuch">
+                        <h4 class="widget-title">Contact us</h4>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i><strong>address</strong> demo address #8901 Marmora Road Chi Minh City, Vietnam </li>
+                            <li><i class="fa fa-phone"></i><strong>phone</strong>0800-123456 (24/7 Support Line)<br>
+                                + (20) 1234 0078 (Fax)</li>
+                            <li><i class="fa fa-envelope"></i><strong>email</strong>info@demo.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {% include routeName~'.html.twig' %}
+
+            </div>
+        </div>
+
+    </div>
+
+
+{% endblock %}

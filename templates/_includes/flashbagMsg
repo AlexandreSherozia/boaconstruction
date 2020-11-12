@@ -1,0 +1,23 @@
+<div class="flashbag">
+    {% for type, flashes in app.session.flashBag.all %}
+        {% for message in flashes %}
+            {% if type == 'success' %}
+                <div class="alert alert-success text-center" style="font-size: 2em">
+                    {{ message }}
+                </div>
+
+            {% elseif type == 'error' %}
+                <div class="alert alert-danger text-center" style="font-size: 2em">
+                    {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    {% endfor %}
+
+    {% for message in app.session.flashBag('error') %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>

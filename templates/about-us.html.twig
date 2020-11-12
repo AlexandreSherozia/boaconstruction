@@ -1,13 +1,8 @@
 {% extends "base.html.twig" %}
 
 {% block title %}
-    {# {{ parent() }} #}
-    Qui sommes-nous
+    {{ categories[1].name|capitalize }}
 {% endblock %}
-
-{#{% block body %}#}
-{#    {{ parent() }}#}
-{#{% endblock %}#}
 
 {% block content %}
     <div class="page-content">
@@ -25,11 +20,15 @@
             <div class="container">
                 <ul class="list-inline">
                     <li><a href="{{ path('home') }}">Accueil</a></li>
-                    <li>Qui sommes-nous</li>
+                    <li>{{ categories[1].name|capitalize }}</li>
                 </ul>
             </div>
         </div>
         <!-- Breadcrumb row END -->
+
+        {#- ------FLASHBAG MESSAGES-------  -#}
+        {% include '_includes/flashbagMsg' %}
+
         <!-- contact area -->
         <div class="clearfix">
             <!-- About Company -->
