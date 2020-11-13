@@ -39,6 +39,16 @@ class Article
      */
     private $backGroundImage;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $isMain;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $materialIcon;
+
     public function __construct()
     {
         $this->textContent = new ArrayCollection();
@@ -111,6 +121,30 @@ class Article
     public function setBackGroundImage(?Image $backGroundImage): self
     {
         $this->backGroundImage = $backGroundImage;
+
+        return $this;
+    }
+
+    public function getIsMain(): ?bool
+    {
+        return $this->isMain;
+    }
+
+    public function setIsMain(?bool $isMain): self
+    {
+        $this->isMain = $isMain;
+
+        return $this;
+    }
+
+    public function getMaterialIcon(): ?string
+    {
+        return $this->materialIcon;
+    }
+
+    public function setMaterialIcon(?string $materialIcon): self
+    {
+        $this->materialIcon = $materialIcon;
 
         return $this;
     }

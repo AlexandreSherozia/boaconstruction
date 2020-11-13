@@ -145,8 +145,6 @@
         </div>
         <!-- Slider END -->
 
-
-
         <!-- meet & ask -->
         <div class="section-full z-index100 meet-ask-outer">
             <div class="container">
@@ -188,54 +186,54 @@
 
 
         <!-- Nos services -->
+
         <div class="section-full  bg-gray content-inner-1" style="background-image: url('images/bg-img.png'); background-repeat: repeat-x; background-position: left bottom -37px;">
             <div class="container">
+
                 <div class="section-content">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <h2 class="text-uppercase"> nos services</h2>
-                            <div class="dez-separator-outer ">
-                                <div class="dez-separator bg-secondry style-skew"></div>
-                            </div>
-                            <div class="clear"></div>
-                            <p><strong>Si vous cherchez un travail de qualité et désirez être tranquille durant vos travaux chez vous, c'est le meilleur endroit pour vous</strong></p>
-                            <p class="m-b50">We are thinkers and dreamers, maker installation and product for buildings. We build and has built hotels, residences hospitals and sports venues. We are devoted to the task to construct your dream to fit all your needs and preference. We realize that our success starts and ends with our employees so we try to provide excellent work to our clients with a level of expertise. </p>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
-                                        <div class="icon-bx-sm bg-primary radius"> <a href="#" class="icon-cell"><i class="fa fa-building-o"></i></a> </div>
-                                        <div class="icon-content p-l40">
-                                            <h5 class="aon-tilte text-uppercase">rénovation</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-                                        </div>
+                        <div class="col-lg-7">
+                            {% for index,article in category.sections[1].articles %}
+                                {% if article.isMain %}
+                                    <h2 class="text-uppercase"> {{ article.title }}</h2>
+                                    <div class="dez-separator-outer ">
+                                        <div class="dez-separator bg-secondry style-skew"></div>
                                     </div>
-                                </div>
+                                    <div class="clear"></div>
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
-                                        <div class="icon-bx-sm bg-primary radius"> <a href="#" class="icon-cell"><i class="fa fa-user"></i></a> </div>
-                                        <div class="icon-content p-l40">
-                                            <h5 class="aon-tilte text-uppercase">plomberie</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
+                                    {% for text in article.textContent %}
+                                        <p class="{{ text.fontWeight }}">{{ text.content }}</p>
+                                    {% endfor %}
+                                {% else %}
+                                    {# Adding rows after every second article #}
+                                    {% if index is odd %}<div class="row">{% endif %}
+
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                            <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
+                                                <div class="icon-bx-sm boa-circle radius">
+                                                    <a href="#">
+                                                        <span class="material-icons">{{ article.materialIcon }}</span>
+                                                    </a>
+                                                </div>
+                                                <div class="icon-content p-l40">
+                                                    <h5 class="aon-tilte text-uppercase">{{ article.title }}</h5>
+                                                    {% for text in article.textContent %}
+                                                        <p class="{{ text.fontWeight }}">{{ text.content }}</p>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    {% if index is even %}</div>{% endif %}
 
-                                <div class="col-lg-4 col-md-6 col-sm-12">
-                                    <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
-                                        <div class="icon-bx-sm bg-primary radius"> <a href="#" class="icon-cell"><i class="fa fa-user"></i></a> </div>
-                                        <div class="icon-content p-l40">
-                                            <h5 class="aon-tilte text-uppercase">électricité</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod [...]</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endif %}
+                            {% endfor %}
 
-                            </div>
                         </div>
-                        {#<div class="col-lg-5">
-                            <div class="dez-thu m"><img src="{{ asset('') }}images/worker.png" alt=""></div>
-                        </div>#}
+
+                        <div class="col-lg-5">
+                            <div class="dez-thu m"><img src="{{ asset('images/worker.png') }}" alt=""></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -366,208 +364,19 @@
         </div>
         <!-- Our Projects END -->
 
-        <!--		<div class="delimiter-green" ></div>-->
 
-        <!-- Architecture -->
-        <!--<div class="section-full  bg-white content-inner overlay-white-middle" style="background-image:url(images/background/bg5.png); background-position:right center; background-repeat:no-repeat; background-size: auto 100%;">
-            <div class="container">
-                <div class="section-head text-center">
-                    <h2 class="text-uppercase"> Notre force</h2>
-                    <div class="dez-separator-outer ">
-                        <div class="dez-separator bg-secondry style-skew"></div>
-                    </div>
-                    <p>We provide a wide variety of services including practical studies, architectural programming and project management. Definitely our work feel amazes you. You will find smoothness and accuracy in our working system.</p>
-                </div>
-                <div class="row section-content">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b40 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-life-saver text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Safety</h5>
-                                <p>With the best quality and service we still concentrate on safety and protection.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b40 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-users text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Community</h5>
-                                <p>We will work and discuss on project with our best team members to define...  </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b40 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-thumbs-up text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Sustainability</h5>
-                                <p>We provide an extraordinary construction project for your dream and desires...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b40 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-trophy text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Best Quality</h5>
-                                <p>We believe in best quality over quantity. We try always best for our clients to... </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b40 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-cubes text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Integrity</h5>
-                                <p>We first create the highest level of trust and integrity with our clients and...</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="icon-bx-wraper center m-b10 m-lr15">
-                            <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-area-chart text-primary"></i></span> </div>
-                            <div class="icon-content">
-                                <h5 class="dez-tilte text-uppercase">Strategy</h5>
-                                <p>We make our master plan by keeping the needs of the people, which is always...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Architecture END-->
         <!-- delimiter -->
         <div class="delimiter-green" ></div>
 
-
-        <!-- Company staus END -->
         <!-- Team member -->
         {% include '_includes/_founders.html.twig' %}
-
-        <!-- Team member END -->
-        <!-- Latest blog -->
-        <!--<div class="section-full content-inner ">
-            <div class="container">
-                <div class="section-head text-center">
-                    <h2 class="text-uppercase">Latest blog post</h2>
-                    <div class="dez-separator-outer ">
-                        <div class="dez-separator bg-secondry style-skew"></div>
-                    </div>
-                </div>
-                <div class="section-content ">
-                    <div class="blog-carousel owl-carousel owl-none">
-                        <div class="item">
-                            <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="javascript:;"><img src="{{ asset('') }}images/blog/latest-blog/pic1.jpg" alt=""></a> </div>
-                                <div class="dez-post-info p-t10">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="javascript:;">Construction Planning</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="javascript:;">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="javascript:;">0 comment</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>This is our latest project which is perfectly constructed. We provide high-end residential construction, hospitals, hotels...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="javascript:;"><img src="{{ asset('') }}images/blog/latest-blog/pic2.jpg" alt=""></a> </div>
-                                <div class="dez-post-info p-t10">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="javascript:;">Professional Services</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="javascript:;">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="javascript:;">0 comment</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>Our construction design provides an extraordinary construction project experience. We are able to provide our customers with a level...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="blog-post latest-blog-1 date-style-3 skew-date">
-                                <div class="dez-post-media dez-img-effect zoom-slow"> <a href="javascript:;"><img src="{{ asset('') }}images/blog/latest-blog/pic3.jpg" alt=""></a> </div>
-                                <div class="dez-post-info p-t10">
-                                    <div class="dez-post-title ">
-                                        <h3 class="post-title"><a href="javascript:;">Creative construct design</a></h3>
-                                    </div>
-                                    <div class="dez-post-meta ">
-                                        <ul>
-                                            <li class="post-date"> <i class="fa fa-calendar"></i><strong>10 Aug</strong> <span> 2020</span> </li>
-                                            <li class="post-author"><i class="fa fa-user"></i>By <a href="javascript:;">demongo</a> </li>
-                                            <li class="post-comment"><i class="fa fa-comments"></i> <a href="javascript:;">0 comment</a> </li>
-                                        </ul>
-                                    </div>
-                                    <div class="dez-post-text">
-                                        <p>We understand the importance of the creation and professionalism and work with the best creative team memeber to achieve this goal...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Latest blog END -->
 
         <!-- delimiter -->
         <div class="delimiter-green" ></div>
         <!-- Testimonials blog -->
         {% include '_includes/_testimonials.html.twig' %}
         <!-- Testimonials blog END -->
-        <!-- Client logo -->
-        <!--<div class="section-full dez-we-find bg-img-fix client-logo-area">
-		    <div class="container">
-                <div class="section-content">
-                    <div class="client-logo-carousel owl-carousel owl-btn-center-lr">
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"><a href="#"><img src="{{ asset('') }}images/client-logo/logo1.jpg" alt=""></a></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"> <a href="#"><img src="{{ asset('') }}images/client-logo/logo2.jpg" alt=""></a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"> <a href="#"><img src="{{ asset('') }}images/client-logo/logo1.jpg" alt=""></a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"> <a href="#"><img src="{{ asset('') }}images/client-logo/logo3.jpg" alt=""></a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"> <a href="#"><img src="{{ asset('') }}images/client-logo/logo4.jpg" alt=""></a> </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="ow-client-logo">
-                                <div class="client-logo"> <a href="#"><img src="{{ asset('') }}images/client-logo/logo3.jpg" alt=""></a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- Client logo END -->
+
     </div>
 
 {% endblock %}

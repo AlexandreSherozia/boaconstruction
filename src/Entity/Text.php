@@ -37,6 +37,11 @@ class Text
      */
     private $article;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $fontWeight;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Text
     public function setArticle(?Article $article): self
     {
         $this->article = $article;
+
+        return $this;
+    }
+
+    public function getFontWeight(): ?string
+    {
+        return $this->fontWeight;
+    }
+
+    public function setFontWeight(?string $fontWeight): self
+    {
+        $this->fontWeight = $fontWeight;
 
         return $this;
     }

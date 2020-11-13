@@ -9963,3 +9963,17 @@ ol.commentlist li .star-rating {
 .owl-next, .owl-prev {
     background-color: #0b2e13 !important;
 }
+.boa-circle {
+    height: 80px!important;
+    width: 80px!important;
+    /*background-color: #508441;*/
+    border: 1px solid #508441;
+    padding: 16px;
+    top: 14px!important;
+}
+/* this class is belongs to google */
+.material-icons {
+    font-size: 45px;
+    /*color: #dedede;*/
+    color: #508441;
+}

@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Accueil{% endblock %}</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Accueil{% endblock %}</title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="construction boa rénovation travaux"/>
-    <meta name="author" content=""/>
-    <meta name="robots" content=""/>
-    <meta name="description" content=""/>
-    <meta property="og:title" content="boaconstruction - BOA Construction"/>
-    <meta property="og:description" content=""/>
-    <meta property="og:image" content=""/>
-    <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="keywords" content="construction boa rénovation travaux"/>
+        <meta name="author" content=""/>
+        <meta name="robots" content=""/>
+        <meta name="description" content=""/>
+        <meta property="og:title" content="boaconstruction - BOA Construction"/>
+        <meta property="og:description" content=""/>
+        <meta property="og:image" content=""/>
+        <meta name="format-detection" content="telephone=no">
 
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+        <!-- FAVICONS ICON -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
 
 
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- MOBILE SPECIFIC -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--[if lt IE 9]>
-        <script src="{{ asset('assets/js/html5shiv.min.js') }}"></script>
-        <script src="{{ asset('assets/js/respond.min.js') }}"></script>
-        <![endif]-->
+        <!--[if lt IE 9]>
+            <script src="{{ asset('assets/js/html5shiv.min.js') }}"></script>
+            <script src="{{ asset('assets/js/respond.min.js') }}"></script>
+            <![endif]-->
 
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins.css') }}">
-    <!--	<link rel="stylesheet" type="text/css" href="css/style.min.css">-->
-    <!--	<link rel="stylesheet" type="text/css" href="css/templete.min.css">-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-    <link class="skin" rel="stylesheet" type="text/css" href="{{ asset('assets/css/skin/skin-1.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/templete.css') }}">
-    <!-- Revolution Slider Css -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/revolution/css/settings.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/revolution/css/navigation.css') }}">
+        <!-- STYLESHEETS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/plugins.css') }}">
+        <!--	<link rel="stylesheet" type="text/css" href="css/style.min.css">-->
+        <!--	<link rel="stylesheet" type="text/css" href="css/templete.min.css">-->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+        <link class="skin" rel="stylesheet" type="text/css" href="{{ asset('assets/css/skin/skin-1.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/templete.css') }}">
+        <!-- Revolution Slider Css -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/revolution/css/settings.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/plugins/revolution/css/navigation.css') }}">
 
-    {% block stylesheets %}{% endblock %}
-</head>
-<body>
-{% block body %}
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body id="bg"><div id="loading-area"></div>
 
-    {#- ------HEADER-------  -#}
-    {% include '_includes/_header.html.twig' %}
+    <div class="page-wraper">
+        {% block body %}
 
-    {#- --------MAIN CONTENT-------  -#}
-    <div id="boa_main_container">
-        {% block content '' %}
+            {#- ------HEADER-------  -#}
+            {% include '_includes/_header.html.twig' %}
+
+            {#- --------MAIN CONTENT-------  -#}
+            <div id="boa_main_container">
+                {% block content '' %}
+            </div>
+
+            {#- ------FOOTER-------  -#}
+            {% include '_includes/_footer.html.twig' %}
+
+        {% endblock %}
     </div>
 
-    {#- ------FOOTER-------  -#}
-    {% include '_includes/_footer.html.twig' %}
+    {% block javascripts %}
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script><!-- JQUERY.MIN JS -->
+    <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
+    <script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
+    <script src="{{ asset('assets/plugins/bootstrap-select/bootstrap-select.min.js') }}"></script><!-- FORM JS -->
+    <script src="{{ asset('assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js') }}"></script><!-- FORM JS -->
+    <script src="{{ asset('assets/plugins/magnific-popup/magnific-popup.js') }}"></script><!-- MAGNIFIC POPUP JS -->
+    <script src="{{ asset('assets/plugins/counter/waypoints-min.js') }}"></script><!-- WAYPOINTS JS -->
+    <script src="{{ asset('assets/plugins/counter/counterup.min.js') }}"></script><!-- COUNTERUP JS -->
+    <script src="{{ asset('assets/plugins/imagesloaded/imagesloaded.js') }}"></script><!-- IMAGESLOADED -->
+    <script src="{{ asset('assets/plugins/masonry/masonry-3.1.4.js') }}"></script><!-- MASONRY -->
+    <script src="{{ asset('assets/plugins/masonry/masonry.filter.js') }}"></script><!-- MASONRY -->
+    <script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script><!-- OWL SLIDER -->
+    <script src="{{ asset('assets/plugins/lightgallery/js/lightgallery-all.js') }}"></script><!-- LIGHT GALLERY -->
+    <script src="{{ asset('assets/js/custom.min.js') }}"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="{{ asset('assets/js/dz.carousel.min.js') }}"></script><!-- SORTCODE FUCTIONS  -->
+    <script src="{{ asset('assets/js/dz.ajax.js') }}"></script><!-- CONTACT JS  -->
 
-{% endblock %}
-
-
-{% block javascripts %}
-<script src="{{ asset('assets/js/jquery.min.js') }}"></script><!-- JQUERY.MIN JS -->
-<script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="{{ asset('assets/plugins/bootstrap-select/bootstrap-select.min.js') }}"></script><!-- FORM JS -->
-<script src="{{ asset('assets/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js') }}"></script><!-- FORM JS -->
-<script src="{{ asset('assets/plugins/magnific-popup/magnific-popup.js') }}"></script><!-- MAGNIFIC POPUP JS -->
-<script src="{{ asset('assets/plugins/counter/waypoints-min.js') }}"></script><!-- WAYPOINTS JS -->
-<script src="{{ asset('assets/plugins/counter/counterup.min.js') }}"></script><!-- COUNTERUP JS -->
-<script src="{{ asset('assets/plugins/imagesloaded/imagesloaded.js') }}"></script><!-- IMAGESLOADED -->
-<script src="{{ asset('assets/plugins/masonry/masonry-3.1.4.js') }}"></script><!-- MASONRY -->
-<script src="{{ asset('assets/plugins/masonry/masonry.filter.js') }}"></script><!-- MASONRY -->
-<script src="{{ asset('assets/plugins/owl-carousel/owl.carousel.js') }}"></script><!-- OWL SLIDER -->
-<script src="{{ asset('assets/plugins/lightgallery/js/lightgallery-all.js') }}"></script><!-- LIGHT GALLERY -->
-<script src="{{ asset('assets/js/custom.min.js') }}"></script><!-- CUSTOM FUCTIONS  -->
-<script src="{{ asset('assets/js/dz.carousel.min.js') }}"></script><!-- SORTCODE FUCTIONS  -->
-<script src="{{ asset('assets/js/dz.ajax.js') }}"></script><!-- CONTACT JS  -->
-
-<!-- REVOLUTION JS FILES -->
-<script src="{{ asset('assets/plugins/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
-<script src="{{ asset('assets/js/rev.slider.js') }}"></script>
-<script>
-    jQuery(document).ready(function() {
-        'use strict';
-        dz_rev_slider_1();
-    });
-</script>
-{% endblock %}
-</body>
+    <!-- REVOLUTION JS FILES -->
+    <script src="{{ asset('assets/plugins/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+    <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+    <script src="{{ asset('assets/js/rev.slider.js') }}"></script>
+    <script>
+        jQuery(document).ready(function() {
+            'use strict';
+            dz_rev_slider_1();
+        });
+    </script>
+    {% endblock %}
+    </body>
 </html>

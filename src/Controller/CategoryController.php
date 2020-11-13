@@ -13,7 +13,7 @@ class CategoryController extends AbstractController
 	/**
 	 * @var CategoryRepository
 	 */
-	private $categoryRepositories;
+	private $categoryRepository;
 
 	/**
 	 * CategoryController constructor.
@@ -22,7 +22,7 @@ class CategoryController extends AbstractController
 	 */
 	public function __construct(CategoryRepository $categoryRepository)
 	{
-		$this->categoryRepositories = $categoryRepository->findAll();
+		$this->categoryRepository = $categoryRepository;
 	}
 
 
@@ -30,16 +30,16 @@ class CategoryController extends AbstractController
 	 * @Route("/", name="home")
 	 * @param Request            $request
 	 *
-	 * @param CategoryRepository $categoryRepository
-	 *
 	 * @return Response
 	 */
     public function index(Request $request): Response
     {
+		$routeName =$request->get('_route');
 
 	    return $this->render('default/index.html.twig', [
-        	'routeName' => $request->get('_route'),
-	        'categories' => $this->categoryRepositories,
+        	'routeName' => $routeName,
+	        'categories' => $this->categoryRepository->findAll(),
+		    'category' => $this->categoryRepository->findOneBy(['routeName'=>$routeName])
         ]);
     }
 
@@ -53,7 +53,7 @@ class CategoryController extends AbstractController
     {
     	return $this->render('about-us.html.twig', [
 		    'routeName' => $request->get('_route'),
-		    'categories' => $this->categoryRepositories,
+		    'categories' => $this->categoryRepository->findAll(),
 	    ]);
     }
 
@@ -67,7 +67,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('nos-services.html.twig', [
 			'routeName' => $request->get('_route'),
-			'categories' => $this->categoryRepositories,
+			'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -81,7 +81,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('our-works.hrml.twig', [
 			'routeName' => $request->get('_route'),
-			'categories' => $this->categoryRepositories,
+			'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -95,7 +95,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('sub_categories.html.twig', [
 			'routeName' => $request->get('_route'),
-			'categories' => $this->categoryRepositories,
+			'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -109,7 +109,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('our-works.hrml.twig', [
 			'routeName' => $request->get('_route'),
-			'categories' => $this->categoryRepositories,
+			'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -123,7 +123,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('our-works.hrml.twig', [
 			'routeName' => $request->get('_route'),
-			'categories' => $this->categoryRepositories,
+			'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -137,7 +137,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('our-works.hrml.twig', [
 			'routeName' => $request->get('_route'),
-	        'categories' => $this->categoryRepositories,
+	        'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 
@@ -151,7 +151,7 @@ class CategoryController extends AbstractController
 	{
 		return $this->render('our-works.hrml.twig', [
 			'routeName' => $request->get('_route'),
-	        'categories' => $this->categoryRepositories,
+	        'categories' => $this->categoryRepository->findAll(),
 		]);
 	}
 }
