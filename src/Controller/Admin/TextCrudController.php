@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Controller\Admin;
+
+use App\Entity\Text;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+
+class TextCrudController extends AbstractCrudController
+{
+    public static function getEntityFqcn(): string
+    {
+        return Text::class;
+    }
+
+
+    public function configureFields(string $pageName): iterable
+    {
+        /*return [
+            IdField::new('id'),
+            TextEditorField::new('content'),
+	        TextField::new('font-family'),
+	        TextField::new('font-size'),
+	        TextField::new('font-size'),
+        ];*/
+    }
+
+}

@@ -54,7 +54,7 @@
                         {% for category in categories %}
 
                             {# Les catégories du menu pricipal#}
-                            {% if category.subCategories is null and category.categories is empty and category.hasSubCategory is null %}
+                            {% if category.subCategories is null and category.categories is empty and category.hasSubCategory == false %}
                                 <li class="{% if category.routeName == routeName %}active{% endif %}"> <a href="{{ path(category.routeName) }}">{{ category.name }}</a></li>
                             {% endif %}
 
@@ -67,7 +67,12 @@
                                     </a>
                                     <ul class="sub-menu">
                                         {% for subCat in category.categories %}
-                                            <li><a href="{{ '/'~category.routePath~'/'~subCat.routeName }}">{{ subCat.name }}  </a></li>
+                                            <li>
+                                                <a href="{{ '/'~category.routePath~'/'~subCat.routeName }}">
+                                                    <span class="material-icons" style="font-size: 30px">{{ subCat.materialIcon }}</span>
+                                                    {{ subCat.name }}
+                                                </a>
+                                            </li>
                                         {% endfor %}
 
                                     </ul>

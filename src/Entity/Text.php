@@ -33,7 +33,7 @@ class Text
     private $fontSize;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="textContent")
+     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="textContent",cascade={"persist"})
      */
     private $article;
 

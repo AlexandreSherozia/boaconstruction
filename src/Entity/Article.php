@@ -30,7 +30,7 @@ class Article
     private $section;
 
     /**
-     * @ORM\OneToMany(targetEntity=Text::class, mappedBy="article")
+     * @ORM\OneToMany(targetEntity=Text::class, mappedBy="article",cascade={"persist"})
      */
     private $textContent;
 

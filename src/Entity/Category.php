@@ -59,6 +59,11 @@ class Category
      */
     private $sections;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $materialIcon;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -198,6 +203,18 @@ class Category
                 $section->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getMaterialIcon(): ?string
+    {
+        return $this->materialIcon;
+    }
+
+    public function setMaterialIcon(?string $materialIcon): self
+    {
+        $this->materialIcon = $materialIcon;
 
         return $this;
     }
