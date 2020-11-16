@@ -22,9 +22,10 @@
 
                                         {% for article in section.articles %}
 
-                                            <li data-index="{{ 'rs-'~article.id~'000' }}" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset(article.backGroundImage.imgPath~article.backGroundImage.title~'.jpg') }}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                            <li data-index="{{ 'rs-'~article.id~'000' }}" data-transition="slidingoverlayhorizontal" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="default" data-thumb="{{ asset('images/thumbnails/'~article.thumbnail) }}" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                                                 <!-- MAIN IMAGE -->
-                                                <img src="{{ asset(article.backGroundImage.imgPath~article.backGroundImage.title~'.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
+{#                                                <img src="{{ asset(article.backGroundImage.imgPath~article.backGroundImage.title~'.jpg') }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>#}
+                                                <img src="{{ asset('images/thumbnails/'~article.thumbnail) }}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina/>
                                                 <!-- LAYERS -->
                                                 <!-- LAYER NR. 1 [ for overlay ] -->
                                                 <div class="tp-caption tp-shape tp-shapewrapper "
@@ -69,6 +70,11 @@
                                                      data-paddingleft="[0,0,0,0]"
 
                                                      style="z-index: 13; white-space: normal; font-size: 60px; line-height: 60px; font-weight: 700; color: rgba(255, 255, 255, 1.00); border-width:0px;">
+
+                                                    {% if article.icon %}
+                                                        <span class="material-icons" style="font-size: 30px">{{ article.icon }}</span>
+                                                    {% endif %}
+
                                                     <span class="text-uppercase" style="font-family: Oswald;">
                                                         {{ article.title }}
                                                     </span>
@@ -98,7 +104,10 @@
                                                      data-paddingleft="[0,0,0,0]"
 
                                                      style="z-index: 13; font-weight: 500; color: rgba(255, 255, 255, 0.85); border-width:0px;">
-                                                    <span>{{ article.textContent|first.content }}</span>
+                                                    {% if article.textContent|first %}
+                                                        <span>{{ article.textContent|first.content }}</span>
+                                                    {% endif %}
+
                                                 </div>
 
                                                 <!-- LAYER NR. 4 [ for readmore botton ] -->
@@ -212,7 +221,7 @@
                                             <div class="icon-bx-wraper bx-style-2 m-l40 m-b30 p-a30 left">
                                                 <div class="icon-bx-sm boa-circle radius">
                                                     <a href="#">
-                                                        <span class="material-icons">{{ article.materialIcon }}</span>
+                                                        <span class="material-icons">{{ article.icon }}</span>
                                                     </a>
                                                 </div>
                                                 <div class="icon-content p-l40">

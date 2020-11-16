@@ -11,13 +11,14 @@
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Section.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Section.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Text.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Text.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/TextType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TextType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_includes/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_includes/_header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/our-works.hrml.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/our-works.hrml.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Entity/Article.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -135,6 +139,8 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jyvW1H0aM3ACKhr9lNFyyPyvoq" />
@@ -146,6 +152,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -181,7 +188,9 @@
       <workItem from="1605101612791" duration="1260000" />
       <workItem from="1605126139375" duration="9513000" />
       <workItem from="1605170586510" duration="51382000" />
-      <workItem from="1605371974708" duration="22282000" />
+      <workItem from="1605371974708" duration="34714000" />
+      <workItem from="1605514252559" duration="686000" />
+      <workItem from="1605522251624" duration="20619000" />
     </task>
     <servers />
   </component>
@@ -194,6 +203,10 @@
     </state>
     <state x="729" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1604820856592" />
     <state x="730" y="-820" key="#com.intellij.fileTypes.FileTypeChooser/1.-1200.1920.1200/0.0.1920.1080@1.-1200.1920.1200" timestamp="1605133467004" />
+    <state x="753" y="249" key="#com.intellij.ide.util.MemberChooser" timestamp="1605538142947">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="753" y="249" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080/0.-1080.1920.1080@0.0.1920.1080" timestamp="1605538142947" />
     <state x="-1260" y="-876" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604872998969">
       <screen x="-1920" y="-876" width="1920" height="1200" />
     </state>
@@ -202,11 +215,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="461" y="185" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1604825414509" />
-    <state x="623" y="-841" width="672" height="611" key="search.everywhere.popup" timestamp="1605452460338">
-      <screen x="0" y="-1080" width="1920" height="1080" />
+    <state x="624" y="-934" width="672" height="679" key="search.everywhere.popup" timestamp="1605559111391">
+      <screen x="1" y="-1200" width="1920" height="1200" />
     </state>
     <state x="623" y="-841" width="672" height="611" key="search.everywhere.popup/0.0.1920.1080/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1605452460338" />
+    <state x="624" y="-934" width="672" height="679" key="search.everywhere.popup/0.0.1920.1080/1.-1200.1920.1200@1.-1200.1920.1200" timestamp="1605559111391" />
+    <state x="623" y="239" width="672" height="611" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1605524436742" />
     <state x="623" y="239" width="672" height="611" key="search.everywhere.popup/1.-1200.1920.1200/0.0.1920.1080@0.0.1920.1080" timestamp="1605373608371" />
-    <state x="624" y="-935" width="672" height="678" key="search.everywhere.popup/1.-1200.1920.1200/0.0.1920.1080@1.-1200.1920.1200" timestamp="1605312048617" />
+    <state x="624" y="-935" width="672" height="678" key="search.everywhere.popup/1.-1200.1920.1200/0.0.1920.1080@1.-1200.1920.1200" timestamp="1605483823260" />
   </component>
 </project>

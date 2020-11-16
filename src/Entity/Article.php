@@ -6,9 +6,11 @@ use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ArticleRepository::class)
+ * @Vich\Uploadable()
  */
 class Article
 {
@@ -39,19 +41,78 @@ class Article
      */
     private $backGroundImage;
 
+	/**
+	 * @ORM\Column(type="string", length=100)
+	 */
+    private $thumbnail;
+
+	/**
+	 * @ORM\Column(type="datetime")
+	 */
+    private $updatedAt;
+
+	/**
+	 * @return mixed
+	 */
+	public function getThumbnail()
+	{
+		return $this->thumbnail;
+	}
+
+	/**
+	 * @param mixed $thumbnail
+	 *
+	 * @return Article
+	 */
+	public function setThumbnail($thumbnail)
+	{
+		$this->thumbnail = $thumbnail;
+
+		return $this;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getThumbnailFile()
+	{
+		return $this->thumbnailFile;
+	}
+
+	/**
+	 * @param mixed $thumbnailFile
+	 *
+	 * @return Article
+	 */
+	public function setThumbnailFile($thumbnailFile)
+	{
+		$this->thumbnailFile = $thumbnailFile;
+
+		if ($thumbnailFile) {
+			$this->updatedAt = new \DateTime();
+		}
+		return $this;
+	}
+
+	/**
+	 * @Vich\UploadableField(mapping="thumbnails", fileNameProperty="thumbnail")
+	 */
+	private $thumbnailFile;
+
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $isMain;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\OneToOne(targetEntity=MaterialIcons::class, cascade={"persist", "remove"})
      */
-    private $materialIcon;
+    private $icon;
 
     public function __construct()
     {
         $this->textContent = new ArrayCollection();
+        $this->updatedAt = new \DateTime();
     }
 
     public function getId(): ?int
@@ -137,14 +198,14 @@ class Article
         return $this;
     }
 
-    public function getMaterialIcon(): ?string
+    public function getIcon(): ?MaterialIcons
     {
-        return $this->materialIcon;
+        return $this->icon;
     }
 
-    public function setMaterialIcon(?string $materialIcon): self
+    public function setIcon(?MaterialIcons $icon): self
     {
-        $this->materialIcon = $materialIcon;
+        $this->icon = $icon;
 
         return $this;
     }

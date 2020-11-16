@@ -106,4 +106,22 @@ class Text
 
         return $this;
     }
+
+	public static function getFontWeights(): array
+	{
+		return [
+			'font-weight-300' => 'font-weight-300',
+			'font-weight-400' => 'font-weight-400',
+			'font-weight-500' => 'font-weight-500',
+			'font-weight-600' => 'font-weight-600',
+			'font-weight-700' => 'font-weight-700',
+			'font-weight-800' => 'font-weight-800',
+			'font-weight-900' => 'font-weight-900',
+		];
+	}
+
+	public function __toString()
+	{
+		return $this->content;
+	}
 }

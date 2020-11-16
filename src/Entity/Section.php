@@ -44,7 +44,13 @@ class Section
         $this->articles = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    //for easyAdminBundle "AssociationField::new()"
+    public function __toString()
+    {
+	    return $this->name;
+    }
+
+	public function getId(): ?int
     {
         return $this->id;
     }
